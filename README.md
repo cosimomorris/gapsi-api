@@ -11,6 +11,7 @@ Koa.js como framework de servidor.
 Manejo de rutas con @koa/router.
 Lectura y escritura de archivos JSON para almacenamiento de datos.
 Instalación
+
 Para ejecutar este proyecto localmente, sigue los siguientes pasos:
 
 Clonar el repositorio:
@@ -20,6 +21,7 @@ Instalar las dependencias:
 npm install
 
 Para iniciar el servidor, ejecuta:
+(instala nodemon antes de ejecutar 'npm install -g nodemon' si not cuentes con ella en tu maquina local)
 npm start
 
 El servidor se iniciará en http://localhost:3000. Las rutas disponibles son:
@@ -32,8 +34,5 @@ Configuración
 No se requieren archivos .env ni configuraciones adicionales para ejecutar el proyecto en su estado actual.
 
 Puedes encontrar un collection de postamn para probar los API en ./gapsi-api-postman_collection.js
-
-Contribuciones
-Las contribuciones al proyecto son bienvenidas. Si tienes sugerencias o mejoras, no dudes en abrir un issue o enviar un pull request.
 
 Cosimo V
