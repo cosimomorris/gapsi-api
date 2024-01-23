@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "c9fa62da-840b-4f5d-97de-af75cc111ade",
+		"name": "gapsi-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29095557"
+	},
+	"item": [
+		{
+			"name": "GET proveedores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/proveedores?page=1&limit=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"proveedores"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE proveedor",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nombre\": \"Cosimo Vulcano\",\n  \"razonSocial\": \"No se\",\n  \"direccion\": \"Cerrada misioneros 22717\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/proveedores"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE proveedor Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/info"
+			},
+			"response": []
+		},
+		{
+			"name": "POST proveedor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 21,\n  \"nombre\": \"Nuevo Proveedor\",\n  \"correo\": \"nuevoproveedor@example.com\",\n  \"sitioWeb\": \"http://www.nuevoproveedor.com\",\n  \"bio\": \"Proveedor de ejemplo\",\n  \"telefono\": \"123-456-7890\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/proveedores"
+			},
+			"response": []
+		}
+	]
+}

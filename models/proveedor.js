@@ -14,16 +14,36 @@ function guardarProveedores(proveedores) {
   fs.writeFileSync(dataPath, data, "utf-8");
 }
 
-function eliminarProveedor(id) {
+function eliminarProveedor({ nombre, razonSocial, direccion }) {
   const proveedores = leerProveedores();
-  const indice = proveedores.findIndex((proveedor) => proveedor.id === id);
+
+  console.log("Datos recibidos para eliminar:", {
+    nombre,
+    razonSocial,
+    direccion,
+  });
+  console.log("Proveedores antes de eliminar:", proveedores);
+
+  const indice = proveedores.findIndex(
+    (proveedor) =>
+      proveedor.nombre === nombre &&
+      proveedor.razonSocial === razonSocial &&
+      proveedor.direccion === direccion
+  );
 
   if (indice !== -1) {
-    proveedores.splice(indice, 1); // Elimina el proveedor del array
-    guardarProveedores(proveedores); // Guarda los cambios en el archivo
-    return true; // Éxito al eliminar el proveedor
+    proveedores.splice(indice, 1);
+    guardarProveedores(proveedores);
+    console.log("Proveedor eliminado:", nombre);
+    return true;
   } else {
-    return false; // El proveedor no se encontró o no se pudo eliminar
+    console.warn(
+      "Proveedor no encontrado o no se pudo eliminar:",
+      nombre,
+      razonSocial,
+      direccion
+    );
+    return false;
   }
 }
 

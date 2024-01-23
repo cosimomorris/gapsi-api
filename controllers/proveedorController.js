@@ -5,6 +5,9 @@ import {
   eliminarProveedor,
 } from "../models/proveedor.js";
 
+import fs from "fs/promises";
+import path from "path";
+
 // Función para obtener los proveedores con paginación
 async function getProveedores(ctx) {
   try {
@@ -56,31 +59,61 @@ async function postProveedor(ctx) {
   }
 }
 
-// Función para eliminar un proveedor por su ID
+// Función actualizada para eliminar un proveedor
 async function deleteProveedor(ctx) {
   try {
-    const proveedorId = parseInt(ctx.params.id, 10); // Convierte el ID de string a número
-    const eliminado = eliminarProveedor(proveedorId);
+    const { nombre, razonSocial, direccion } = ctx.request.body; // Utiliza los nuevos campos
+    const eliminado = eliminarProveedor({ nombre, razonSocial, direccion });
     if (eliminado) {
-      console.log("Proveedor eliminado con éxito, ID:", proveedorId); // Console log añadido
-      ctx.status = 200; // Cambiado de 204 a 200
-      ctx.body = {
-        mensaje: `Proveedor con ID ${proveedorId} eliminado con éxito.`,
-      }; // Mensaje de confirmación
+      console.log(
+        "Proveedor eliminado con éxito:",
+        nombre,
+        razonSocial,
+        direccion
+      );
+      ctx.status = 200;
+      ctx.body = { mensaje: "Proveedor eliminado con éxito." };
     } else {
       console.warn(
-        "Proveedor no encontrado o no se pudo eliminar, ID:",
-        proveedorId
-      ); // Console log añadido
+        "Proveedor no encontrado o no se pudo eliminar:",
+        nombre,
+        razonSocial,
+        direccion
+      );
       ctx.status = 404;
       ctx.body = { error: "Proveedor no encontrado o no se pudo eliminar." };
     }
   } catch (error) {
-    console.error("Error al eliminar proveedor:", error); // Console log añadido
+    console.error("Error al eliminar proveedor:", error);
     ctx.status = 500;
     ctx.body = { error: "Ha ocurrido un error al eliminar el proveedor." };
   }
 }
 
+//Funcion para version number y candidate number
+async function getVersionAndNextCandidate(ctx) {
+  try {
+    // Lee el archivo package.json
+    const packageJsonPath = path.join(process.cwd(), "package.json");
+    const packageJson = await fs.readFile(packageJsonPath, "utf8");
+    const pkg = JSON.parse(packageJson);
+
+    const proveedores = leerProveedores();
+    const nextCandidateNumber = proveedores.length + 1;
+    const version = pkg.version;
+
+    ctx.body = { version, nextCandidateNumber };
+  } catch (error) {
+    console.error("Error al obtener la información:", error);
+    ctx.status = 500;
+    ctx.body = { error: "Ha ocurrido un error al obtener la información." };
+  }
+}
+
 // Exporta las funciones para su uso en las rutas
-export { getProveedores, postProveedor, deleteProveedor };
+export {
+  getProveedores,
+  postProveedor,
+  deleteProveedor,
+  getVersionAndNextCandidate,
+};

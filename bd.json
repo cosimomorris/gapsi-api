@@ -5,152 +5,20 @@
             "nombre": "Patricia Martínez",
             "correo": "patriciam@gmail.com",
             "sitioWeb": "http://www.patriciamartínez.com",
+            "razonSocial": "Patricia Martínez S.A. de C.V.",
+            "direccion": "Av. Insurgentes Sur 1234, Col. Del Valle, CDMX",
             "bio": "Proveedor especializado en alimentos y bebidas",
             "telefono": "296-802-7793"
         },
         {
-            "id": 2,
-            "nombre": "María García",
-            "correo": "maríag@yahoo.com",
-            "sitioWeb": "http://www.maríagarcía.com",
-            "bio": "Proveedor especializado en alimentos y bebidas",
-            "telefono": "292-532-6880"
-        },
-        {
-            "id": 3,
-            "nombre": "María González",
-            "correo": "maríag@gmail.com",
-            "sitioWeb": "http://www.maríagonzález.com",
-            "bio": "Proveedor especializado en servicios logísticos",
-            "telefono": "442-964-5166"
-        },
-        {
-            "id": 4,
-            "nombre": "Carmen González",
-            "correo": "carmeng@proveedor.com.mx",
-            "sitioWeb": "http://www.carmengonzález.com",
-            "bio": "Proveedor especializado en productos electrónicos",
-            "telefono": "354-408-7443"
-        },
-        {
-            "id": 5,
-            "nombre": "Carmen López",
-            "correo": "carmenl@hotmail.com",
-            "sitioWeb": "http://www.carmenlópez.com",
-            "bio": "Proveedor especializado en artículos de moda",
-            "telefono": "211-997-3170"
-        },
-        {
-            "id": 6,
-            "nombre": "Ana Sánchez",
-            "correo": "anas@yahoo.com",
-            "sitioWeb": "http://www.anasánchez.com",
-            "bio": "Proveedor especializado en productos electrónicos",
-            "telefono": "326-491-9211"
-        },
-        {
-            "id": 7,
-            "nombre": "Carmen García",
-            "correo": "carmeng@gmail.com",
-            "sitioWeb": "http://www.carmengarcía.com",
-            "bio": "Proveedor especializado en productos electrónicos",
-            "telefono": "579-612-6376"
-        },
-        {
-            "id": 8,
-            "nombre": "Carlos González",
-            "correo": "carlosg@outlook.com",
-            "sitioWeb": "http://www.carlosgonzález.com",
-            "bio": "Proveedor especializado en alimentos y bebidas",
-            "telefono": "530-940-1398"
-        },
-        {
-            "id": 11,
-            "nombre": "Ana Rodríguez",
-            "correo": "anar@outlook.com",
-            "sitioWeb": "http://www.anarodríguez.com",
-            "bio": "Proveedor especializado en productos de oficina",
-            "telefono": "114-324-8642"
-        },
-        {
-            "id": 12,
-            "nombre": "Luis Hernández",
-            "correo": "luish@proveedor.com.mx",
-            "sitioWeb": "http://www.luishernández.com",
-            "bio": "Proveedor especializado en artículos de moda",
-            "telefono": "491-953-5625"
-        },
-        {
-            "id": 13,
-            "nombre": "Carlos Martínez",
-            "correo": "carlosm@hotmail.com",
-            "sitioWeb": "http://www.carlosmartínez.com",
-            "bio": "Proveedor especializado en productos electrónicos",
-            "telefono": "171-536-4566"
-        },
-        {
-            "id": 14,
-            "nombre": "Miguel Hernández",
-            "correo": "miguelh@hotmail.com",
-            "sitioWeb": "http://www.miguelhernández.com",
-            "bio": "Proveedor especializado en productos electrónicos",
-            "telefono": "749-753-3345"
-        },
-        {
-            "id": 15,
-            "nombre": "Luis García",
-            "correo": "luisg@gmail.com",
-            "sitioWeb": "http://www.luisgarcía.com",
-            "bio": "Proveedor especializado en alimentos y bebidas",
-            "telefono": "683-499-8068"
-        },
-        {
-            "id": 16,
-            "nombre": "Jose Rodríguez",
-            "correo": "joser@outlook.com",
-            "sitioWeb": "http://www.joserodríguez.com",
-            "bio": "Proveedor especializado en productos electrónicos",
-            "telefono": "569-482-3827"
-        },
-        {
-            "id": 17,
-            "nombre": "Ana López",
-            "correo": "anal@yahoo.com",
-            "sitioWeb": "http://www.analópez.com",
-            "bio": "Proveedor especializado en productos electrónicos",
-            "telefono": "951-255-4310"
-        },
-        {
-            "id": 18,
-            "nombre": "Juan González",
-            "correo": "juang@hotmail.com",
-            "sitioWeb": "http://www.juangonzález.com",
-            "bio": "Proveedor especializado en servicios logísticos",
-            "telefono": "758-921-8537"
-        },
-        {
-            "id": 19,
-            "nombre": "Carmen García",
-            "correo": "carmeng@hotmail.com",
-            "sitioWeb": "http://www.carmengarcía.com",
-            "bio": "Proveedor especializado en productos electrónicos",
-            "telefono": "591-202-4125"
-        },
-        {
-            "id": 20,
-            "nombre": "Jose Sánchez",
-            "correo": "joses@outlook.com",
-            "sitioWeb": "http://www.josesánchez.com",
-            "bio": "Proveedor especializado en productos de oficina",
-            "telefono": "734-612-5141"
-        },
-        {
-            "id": 21,
-            "nombre": "Nuevo Proveedor",
-            "correo": "nuevoproveedor@example.com",
-            "sitioWeb": "http://www.nuevoproveedor.com",
-            "bio": "Proveedor de ejemplo",
-            "telefono": "123-456-7890"
+            "id": "2",
+            "nombre": "Cosimo Vulcano",
+            "correo": "morriscosimo@gmail.com",
+            "sitioWeb": "cosimo.site",
+            "razonSocial": "Software",
+            "direccion": "Cerrada misioneros 22717",
+            "bio": "Soy cosimo vulcano",
+            "telefono": "6361150032"
         }
     ]
 }
